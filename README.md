@@ -53,6 +53,7 @@ docs/
   08-related-publications-and-prior-art.md   Tax/legal/finance/medical prior art (the evidence base)
   09-reference-implementations.md    Working, proven GitHub repos for each stage (+ evidence map)
   10-datasets-you-need.md            Datasets to reuse vs build; finance/tax/accounting literature
+  11-data-labelling-and-generation.md   Per-use-case labelling/generation process (jargon/topics/procedures)
 schemas/
   chunk.schema.json        Canonical chunk record (provenance + currency + ITA refs)
   eval_item.schema.json    Gold QA / red-team item schema
