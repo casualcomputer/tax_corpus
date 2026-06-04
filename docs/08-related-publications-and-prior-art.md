@@ -85,6 +85,37 @@ in `01`–`07`. Datasets/benchmarks you can reuse or imitate are flagged 📊; m
 - 📄 **DPO** (2305.18290), **ORPO** (2403.07691), **KTO** (2402.01306): the preference-loss
   menu in `07`.
 
+## Commercial & community prior art (Canadian tax AI) — yes, this is being built
+
+Two cohorts, and both converge on *exactly* this repo's design — **RAG over authoritative
+Canadian sources + mandatory citations + human review**:
+
+- **Commercial, professional-grade:**
+  - **Blue J** (CPA Canada partner) — generative tax research with a ChatGPT-like UI
+    grounded in *primary authoritative content* + Tax Notes/IBFD, cited answers.
+  - **TaxGPT (Canada)** — grounded on the ITA, CRA guidance, Tax Court, all provinces,
+    GST/HST, SR&ED; **every answer carries citations**; client-document upload = RAG over a
+    file.
+  - **CloudTax**, plus consumer custom GPTs ("Canada Tax GPT") at the DIY end.
+- **Community (r/cantax & practitioners):** heavy use of general ChatGPT — and heavy burns.
+  The documented failure modes map 1:1 to our gates:
+
+  | Reported real-world failure | Our gate (`docs/05`) |
+  |---|---|
+  | Hallucinated a 2026 capital-gains limit "increase" not in legislation/CRA/Finance | currency-flagging + **fabricated-citation = 0** + faithfulness |
+  | Claims US deferrals apply in Canada (jurisdiction bleed) | out-of-scope / jurisdiction **abstention** (red-team) |
+  | 50% of accountants saw businesses harmed; 44% spend ≤3 hrs/mo fixing AI errors | **human-in-the-loop**; decision-support, not advice |
+
+**The consensus differentiator** everyone reaches: *narrow to authoritative Canadian
+sources + cite everything + keep a human in the loop.* That is this repo's thesis.
+
+**Where a local/DIY build still wins** (don't try to rebuild Blue J's licensed corpus):
+data **privacy / on-prem** (taxpayer data never leaves the box), **cost** (no per-seat), and
+**internal use cases the research tools don't target** — audit-risk triage and procedure
+recommendation from the **Audit Manual**, document routing, provision tagging. The premium
+tools' moat is licensed case-law/commentary breadth; compete on *your* private data and
+internal compliance workflows, not on republishing authority.
+
 ## Takeaway
 
 Every lever in this repo — RAG backbone, hard-negative embedding training, light
