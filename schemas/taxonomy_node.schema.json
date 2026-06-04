@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/casualcomputer/tax_corpus/schemas/taxonomy_node.schema.json",
+  "title": "TaxonomyNode (SKOS-aligned)",
+  "description": "A concept node in the tax topic taxonomy induced from the glossary. SKOS-aligned so it interoperates and supports poly-hierarchy (a concept can have several parents).",
+  "type": "object",
+  "required": ["id", "prefLabel"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "description": "Stable concept id, e.g. 'tax:capital-gains'." },
+    "prefLabel": { "type": "string", "description": "skos:prefLabel (from glossary term or SME)." },
+    "altLabel": { "type": "array", "items": { "type": "string" }, "description": "skos:altLabel — synonyms/acronyms/jargon (from glossary synonyms); powers matching + query expansion." },
+    "definition": { "type": ["string", "null"], "description": "skos:definition." },
+    "facet": { "type": "string", "enum": ["subject_matter", "taxpayer_type", "process_stage", "authority_tier"], "description": "Which classification axis this node lives on (poly-hierarchy = facets, not one tree)." },
+    "broader": { "type": ["string", "null"], "description": "Primary parent concept id." },
+    "broader_all": { "type": "array", "items": { "type": "string" }, "description": "All parents (poly-hierarchy)." },
+    "narrower": { "type": "array", "items": { "type": "string" } },
+    "related": { "type": "array", "items": { "type": "string" }, "description": "skos:related / 'see also'." },
+    "mapped_provisions": { "type": "array", "items": { "type": "string" }, "description": "ITA/Reg/IT/Folio anchors; bridge to silver-label provision tagging + retrieval filters." },
+    "glossary_terms": { "type": "array", "items": { "type": "string" }, "description": "term_ids assigned to this node." },
+    "method": { "type": "string", "enum": ["skeleton", "cluster", "llm", "sme"], "description": "Provenance of the node/assignment." },
+    "validated": { "type": "boolean", "description": "True only after SME review." }
+  }
+}

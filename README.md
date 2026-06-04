@@ -54,9 +54,12 @@ docs/
   09-reference-implementations.md    Working, proven GitHub repos for each stage (+ evidence map)
   10-datasets-you-need.md            Datasets to reuse vs build; finance/tax/accounting literature
   11-data-labelling-and-generation.md   Per-use-case labelling/generation process (jargon/topics/procedures)
+  12-glossary-to-taxonomy.md         How to induce the topic taxonomy from an existing glossary
 schemas/
   chunk.schema.json        Canonical chunk record (provenance + currency + ITA refs)
   eval_item.schema.json    Gold QA / red-team item schema
+  glossary_term.schema.json   Input contract for the glossary->taxonomy builder
+  taxonomy_node.schema.json   SKOS-aligned taxonomy concept (poly-hierarchy + provision anchors)
 data/eval/
   seed_questions.jsonl     Seed gold items (schema demonstration — expert-validation required)
 requirements.txt           Recommended OSS components (local-first)

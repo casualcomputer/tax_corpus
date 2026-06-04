@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/casualcomputer/tax_corpus/schemas/glossary_term.schema.json",
+  "title": "GlossaryTerm",
+  "description": "Input contract for the glossary->taxonomy builder. This is what the builder needs from your existing glossary; the richer the optional fields, the better the induced taxonomy.",
+  "type": "object",
+  "required": ["term", "definition"],
+  "additionalProperties": false,
+  "properties": {
+    "term_id": { "type": "string", "description": "Stable id; generated if absent." },
+    "term": { "type": "string", "description": "Headword -> becomes skos:prefLabel." },
+    "definition": { "type": "string", "description": "The semantic payload; the embedding source for clustering." },
+    "synonyms": { "type": "array", "items": { "type": "string" }, "description": "Acronyms / jargon variants -> become skos:altLabel (critical for matching enterprise text)." },
+    "see_also": { "type": "array", "items": { "type": "string" }, "description": "Related term ids/labels -> become skos:related edges." },
+    "provisions": { "type": "array", "items": { "type": "string" }, "description": "ITA/Reg/IT/Folio anchors, e.g. '54', '20(1)(a)', 'IT-518R' -> authority grouping prior." },
+    "source": { "type": "string" },
+    "language": { "type": "string", "enum": ["en", "fr"] }
+  }
+}
