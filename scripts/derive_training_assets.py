@@ -40,27 +40,54 @@ for t in tax:
     if variants: syn[p] = variants
 json.dump(syn, open(D / "synonyms.json", "w"), ensure_ascii=False, indent=2)
 
-# 2) contrastive triplets with STRUCTURAL hard negatives
-def hard_negative(t):
-    tid = t["term_id"]; my_sm = term_sm.get(tid, set()); my_ac = set(t.get("synonyms", [])); my_w = words(pref(t))
-    best, bs = None, -1
+# 2) contrastive triplets with STRUCTURAL hard negatives (top-K, head/modifier-aware)
+K = 5   # hard negatives mined per anchor; in-batch negatives supply the rest at train time
+
+def headmods(s):
+    toks = [w for w in re.findall(r"[a-z]+", s.lower()) if w not in STOP]
+    return (toks[-1] if toks else ""), set(toks[:-1])   # (head/genus, modifiers/differentia)
+
+def relation(a, c):
+    ha, ma = headmods(a); hc, mc = headmods(c)
+    if ha and ha == hc and ma != mc: return "same-head/diff-modifier"   # strongest minimal pair
+    if (ma & mc) and ha != hc:        return "same-modifier/diff-head"
+    if (ma & mc) or ha == hc or {ha} & mc or {hc} & ma: return "partial-overlap"
+    return "disjoint/easy"
+
+def hard_negatives(t):
+    # Gate on the LINGUISTIC relationship (surface-similar minimal pair), not on the taxonomy
+    # node — so intra-topic contrasts (Capital gain vs Capital loss) are kept. The taxonomy
+    # node/provision is logged as *confirming* metadata. Distinct glossary terms are never
+    # synonyms here, so there is no false-negative risk at this (glossary) scale.
+    tid = t["term_id"]; my_sm = term_sm.get(tid, set())
+    my_ac = set(t.get("synonyms", [])); my_w = words(pref(t)); my_prov = set(t.get("provisions", []))
+    ha, ma = headmods(pref(t)); cands = []
     for o in tax:
-        oid = o["term_id"]
-        if oid == tid or (term_sm.get(oid, set()) & my_sm):   # must be a DIFFERENT subject node
-            continue
-        s = 10 * len(my_ac & set(o.get("synonyms", []))) + len(my_w & words(pref(o)))  # shared acronym >> shared word
-        if s > bs: best, bs = o, s
-    return best, bs
+        if o["term_id"] == tid: continue
+        rel = relation(pref(t), pref(o))
+        if rel == "disjoint/easy": continue                    # not surface-similar -> easy negative, skip
+        ho, mo = headmods(pref(o))
+        score = (10 * len(my_ac & set(o.get("synonyms", [])))   # shared acronym (e.g. ITC) — hardest
+                 + 3 * (ha == ho and bool(ha))                  # shared head/genus
+                 + 2 * len(ma & mo)                             # shared modifier/differentia token
+                 + 1 * len(my_w & words(pref(o))))              # any other shared word
+        cands.append((score, rel, o))
+    cands.sort(key=lambda x: -x[0])
+    return [{"term": pref(o), "definition": o["definition"], "relation": rel,
+             "cross_topic": not (term_sm.get(o["term_id"], set()) & my_sm),
+             "shared_provision": bool(my_prov & set(o.get("provisions", [])))}
+            for _, rel, o in cands[:K]]
+
 triplets = []
 for t in tax:
     if not t.get("definition") or t["term_id"] not in term_sm: continue
-    hn, score = hard_negative(t)
-    if not hn: continue
-    triplets.append({"anchor": pref(t), "positive": t["definition"],
-                     "hard_negative": pref(hn), "hard_negative_definition": hn["definition"],
-                     "shared_signal": ("acronym" if score >= 10 else "lexical" if score > 0 else "sibling-facet")})
+    hns = hard_negatives(t)
+    if hns:
+        triplets.append({"anchor": pref(t), "positive": t["definition"], "hard_negatives": hns})
 with open(D / "embedding_triplets.jsonl", "w") as f:
     for r in triplets: f.write(json.dumps(r, ensure_ascii=False) + "\n")
+from collections import Counter
+rel_dist = Counter(h["relation"] for r in triplets for h in r["hard_negatives"])
 
 # 3) classification label space (topic = subject_matter + taxpayer_type + process_stage)
 labels = [{"id": n["id"], "label": n["prefLabel"], "facet": n["facet"], "size": len(n["glossary_terms"])}
@@ -76,9 +103,13 @@ prov = {k: sorted(set(v)) for k, v in sorted(prov.items())}
 json.dump(prov, open(D / "provision_to_terms.json", "w"), ensure_ascii=False, indent=2)
 
 # samples
-print(f"synonyms: {len(syn)} | triplets: {len(triplets)} | labels: {len(labels)} | provisions: {len(prov)}\n")
-print("SAMPLE structural hard negatives (anchor  X  hard-negative  [signal]):")
-for r in [x for x in triplets if x["shared_signal"] == "acronym"][:3] + triplets[:2]:
-    print(f"  {r['anchor']!r}  X  {r['hard_negative']!r}  [{r['shared_signal']}]")
+avg = sum(len(r["hard_negatives"]) for r in triplets) / max(len(triplets), 1)
+print(f"synonyms: {len(syn)} | anchors: {len(triplets)} (avg {avg:.1f} hard-negs, K={K}) | labels: {len(labels)} | provisions: {len(prov)}")
+print(f"hard-negative relation mix: {dict(rel_dist)}\n")
+def show(anchor):
+    r = next((x for x in triplets if x["anchor"] == anchor), None)
+    if r: print(f"  {anchor}  X  " + " | ".join(f"{h['term']} [{h['relation']}]" for h in r["hard_negatives"]))
+print("SAMPLE top-K structural hard negatives:")
+for a in ["Input tax credit", "Capital gain", "Taxable supply", "Adjusted cost base"]: show(a)
 print("\nSAMPLE provision -> terms (silver tagging):")
 for k in list(prov)[:6]: print(f"  {k}: {prov[k]}")
