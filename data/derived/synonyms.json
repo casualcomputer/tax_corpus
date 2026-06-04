@@ -1,0 +1,66 @@
+{
+  "Adjusted cost base": [
+    "ACB",
+    "Adjusted cost base (ACB)"
+  ],
+  "Capital cost allowance": [
+    "CCA",
+    "Capital cost allowance (CCA)"
+  ],
+  "Educational assistance payment": [
+    "EAP",
+    "Educational assistance payment (EAP)"
+  ],
+  "First Home Savings Account": [
+    "FHSA",
+    "First Home Savings Account (FHSA)"
+  ],
+  "Flow-through share": [
+    "FTS",
+    "Flow-through share (FTS)"
+  ],
+  "Home Buyers’ Plan": [
+    "HBP",
+    "Home Buyers’ Plan (HBP)"
+  ],
+  "Input tax credit": [
+    "ITC",
+    "Input tax credit (ITC)"
+  ],
+  "Investment tax credit": [
+    "ITC",
+    "Investment tax credit (ITC)"
+  ],
+  "Lifelong Learning Plan": [
+    "LLP",
+    "Lifelong Learning Plan (LLP)"
+  ],
+  "Notice of assessment": [
+    "NOA",
+    "Notice of assessment (NOA)"
+  ],
+  "Registered education savings plan": [
+    "RESP",
+    "Registered education savings plan (RESP)"
+  ],
+  "Registered pension plan": [
+    "RPP",
+    "Registered pension plan (RPP)"
+  ],
+  "Registered retirement income fund": [
+    "RRIF",
+    "Registered retirement income fund (RRIF)"
+  ],
+  "Registered retirement savings plan": [
+    "RRSP",
+    "Registered retirement savings plan (RRSP)"
+  ],
+  "Scientific research and experimental development": [
+    "SR&ED",
+    "Scientific research and experimental development (SR&ED)"
+  ],
+  "Tax-Free Savings Account": [
+    "TFSA",
+    "Tax-Free Savings Account (TFSA)"
+  ]
+}

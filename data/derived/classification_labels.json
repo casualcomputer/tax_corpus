@@ -1,0 +1,128 @@
+[
+  {
+    "id": "sm-income",
+    "label": "Income & its computation",
+    "facet": "subject_matter",
+    "size": 6
+  },
+  {
+    "id": "sm-capital",
+    "label": "Capital gains & property",
+    "facet": "subject_matter",
+    "size": 11
+  },
+  {
+    "id": "sm-gst-hst",
+    "label": "GST/HST",
+    "facet": "subject_matter",
+    "size": 13
+  },
+  {
+    "id": "sm-registered-plans",
+    "label": "Registered & savings plans",
+    "facet": "subject_matter",
+    "size": 12
+  },
+  {
+    "id": "sm-charities",
+    "label": "Charities & donations",
+    "facet": "subject_matter",
+    "size": 5
+  },
+  {
+    "id": "sm-incentives",
+    "label": "Tax incentives & shelters",
+    "facet": "subject_matter",
+    "size": 8
+  },
+  {
+    "id": "sm-business-accounting",
+    "label": "Business & accounting concepts",
+    "facet": "subject_matter",
+    "size": 11
+  },
+  {
+    "id": "sm-credits-deductions",
+    "label": "Credits, deductions & benefits",
+    "facet": "subject_matter",
+    "size": 7
+  },
+  {
+    "id": "sm-structural",
+    "label": "Structural & general legal concepts",
+    "facet": "subject_matter",
+    "size": 2
+  },
+  {
+    "id": "ps-filing",
+    "label": "Filing & registration",
+    "facet": "process_stage",
+    "size": 2
+  },
+  {
+    "id": "ps-assessment",
+    "label": "Assessment & reassessment",
+    "facet": "process_stage",
+    "size": 2
+  },
+  {
+    "id": "ps-payment-collection",
+    "label": "Payment, refund & collection",
+    "facet": "process_stage",
+    "size": 4
+  },
+  {
+    "id": "ps-audit",
+    "label": "Audit & examination",
+    "facet": "process_stage",
+    "size": 14
+  },
+  {
+    "id": "ps-appeals",
+    "label": "Objections & appeals",
+    "facet": "process_stage",
+    "size": 1
+  },
+  {
+    "id": "ps-sred-review",
+    "label": "SR&ED review",
+    "facet": "process_stage",
+    "size": 1
+  },
+  {
+    "id": "tt-individual",
+    "label": "Individual",
+    "facet": "taxpayer_type",
+    "size": 9
+  },
+  {
+    "id": "tt-corporation",
+    "label": "Corporation",
+    "facet": "taxpayer_type",
+    "size": 2
+  },
+  {
+    "id": "tt-partnership",
+    "label": "Partnership",
+    "facet": "taxpayer_type",
+    "size": 1
+  },
+  {
+    "id": "tt-charity",
+    "label": "Charity / qualified donee",
+    "facet": "taxpayer_type",
+    "size": 1
+  },
+  {
+    "id": "tt-registrant",
+    "label": "GST/HST registrant",
+    "facet": "taxpayer_type",
+    "size": 3
+  },
+  {
+    "id": "tt-plan-holder",
+    "label": "Registered-plan holder",
+    "facet": "taxpayer_type",
+    "size": 6
+  }
+]
