@@ -60,6 +60,11 @@ schemas/
   eval_item.schema.json    Gold QA / red-team item schema
   glossary_term.schema.json   Input contract for the glossary->taxonomy builder
   taxonomy_node.schema.json   SKOS-aligned taxonomy concept (poly-hierarchy + provision anchors)
+scripts/
+  normalize_glossaries.py     CRA glossary .xlsx -> normalized JSONL
+  build_taxonomy.py           glossary -> SKOS taxonomy + coverage/tree reports (docs/12)
+data/glossary/             normalized glossaries (tax_terms, acronyms) + source/ xlsx
+data/taxonomy/             induced taxonomy.json + coverage_report + tree (SME-review pending)
 data/eval/
   seed_questions.jsonl     Seed gold items (schema demonstration — expert-validation required)
 requirements.txt           Recommended OSS components (local-first)

@@ -1,0 +1,1213 @@
+[
+  {
+    "id": "sm-root",
+    "prefLabel": "Tax subject matter",
+    "altLabel": [],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": null,
+    "broader_all": [],
+    "narrower": [
+      "sm-income",
+      "sm-capital",
+      "sm-gst-hst",
+      "sm-registered-plans",
+      "sm-charities",
+      "sm-incentives",
+      "sm-business-accounting",
+      "sm-credits-deductions",
+      "sm-structural"
+    ],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-income",
+    "prefLabel": "Income & its computation",
+    "altLabel": [],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "9",
+      "20(1)(a)",
+      "Reg 1100",
+      "13(21)",
+      "5",
+      "6",
+      "3",
+      "2(2)"
+    ],
+    "glossary_terms": [
+      "business-income",
+      "capital-cost-allowance-cca",
+      "depreciable-property",
+      "employment-income",
+      "net-income",
+      "taxable-income"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-capital",
+    "prefLabel": "Capital gains & property",
+    "altLabel": [
+      "ACB",
+      "CCA"
+    ],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "54",
+      "20(1)(a)",
+      "Reg 1100",
+      "39(1)(a)",
+      "40",
+      "39(1)(b)",
+      "13(21)",
+      "248(1)",
+      "40(2)(b)",
+      "40(2)(g)",
+      "38(a)"
+    ],
+    "glossary_terms": [
+      "adjusted-cost-base-acb",
+      "capital-cost-allowance-cca",
+      "capital-gain",
+      "capital-loss",
+      "capital-property",
+      "depreciable-property",
+      "disposition",
+      "principal-residence",
+      "proceeds-of-disposition",
+      "superficial-loss",
+      "taxable-capital-gain"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-gst-hst",
+    "prefLabel": "GST/HST",
+    "altLabel": [
+      "ITC"
+    ],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "ETA 123(1)",
+      "ETA Sch V",
+      "122.5",
+      "ETA 240",
+      "ETA 169",
+      "ETA 225",
+      "ETA 228",
+      "ETA 144.1",
+      "ETA 148",
+      "ETA Sch VI"
+    ],
+    "glossary_terms": [
+      "commercial-activity",
+      "consideration",
+      "exempt-supply",
+      "gst-hst-credit",
+      "gst-hst-registrant",
+      "input-tax-credit-itc",
+      "net-tax",
+      "participating-province",
+      "place-of-supply",
+      "small-supplier",
+      "supply",
+      "taxable-supply",
+      "zero-rated-supply"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-registered-plans",
+    "prefLabel": "Registered & savings plans",
+    "altLabel": [
+      "EAP",
+      "FHSA",
+      "HBP",
+      "LLP",
+      "RESP",
+      "RPP",
+      "RRIF",
+      "RRSP",
+      "TFSA"
+    ],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "146.1(1)",
+      "146.6",
+      "146.6(1)",
+      "146.01",
+      "146.02",
+      "146.1",
+      "147.1",
+      "146.3",
+      "146",
+      "146.2"
+    ],
+    "glossary_terms": [
+      "educational-assistance-payment-eap",
+      "first-home-savings-account-fhsa",
+      "fhsa-participation-room",
+      "home-buyers-plan-hbp",
+      "lifelong-learning-plan-llp",
+      "qualified-investment",
+      "registered-education-savings-plan-resp",
+      "registered-pension-plan-rpp",
+      "registered-retirement-income-fund-rrif",
+      "registered-retirement-savings-plan-rrsp",
+      "subscriber",
+      "tax-free-savings-account-tfsa"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-charities",
+    "prefLabel": "Charities & donations",
+    "altLabel": [],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "118.1",
+      "237.1",
+      "Reg 3501",
+      "149.1(1)",
+      "248(1)",
+      "149.1"
+    ],
+    "glossary_terms": [
+      "gift",
+      "gifting-arrangement",
+      "official-donation-receipt",
+      "qualified-donee",
+      "registered-charity"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-incentives",
+    "prefLabel": "Tax incentives & shelters",
+    "altLabel": [
+      "FTS",
+      "ITC",
+      "SR&ED"
+    ],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "66(15)",
+      "237.1",
+      "127(5)",
+      "127(9)",
+      "237.1(1)",
+      "37",
+      "248(1)"
+    ],
+    "glossary_terms": [
+      "flow-through-share-fts",
+      "gifting-arrangement",
+      "investment-tax-credit-itc",
+      "prescribed-property",
+      "promoter",
+      "scientific-research-and-experimental-development-sr-ed",
+      "tax-shelter",
+      "tax-shelter-identification-number"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-business-accounting",
+    "prefLabel": "Business & accounting concepts",
+    "altLabel": [],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "9",
+      "248(1)",
+      "249.1",
+      "10",
+      "96",
+      "102",
+      "153"
+    ],
+    "glossary_terms": [
+      "account",
+      "accounts-payable",
+      "accounts-receivable",
+      "business-income",
+      "corporation",
+      "expense",
+      "fiscal-period",
+      "inventory",
+      "partnership",
+      "payroll-remittance",
+      "revenue"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-credits-deductions",
+    "prefLabel": "Credits, deductions & benefits",
+    "altLabel": [],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "122.5",
+      "118(1)"
+    ],
+    "glossary_terms": [
+      "benefit",
+      "deduction",
+      "eligible-child",
+      "gst-hst-credit",
+      "spouse-or-common-law-partner-amount",
+      "tax-credit",
+      "tax-deduction"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "sm-structural",
+    "prefLabel": "Structural & general legal concepts",
+    "altLabel": [],
+    "definition": null,
+    "facet": "subject_matter",
+    "broader": "sm-root",
+    "broader_all": [
+      "sm-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "248(1)"
+    ],
+    "glossary_terms": [
+      "common-law-partner",
+      "property"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "ps-root",
+    "prefLabel": "Compliance lifecycle",
+    "altLabel": [],
+    "definition": null,
+    "facet": "process_stage",
+    "broader": null,
+    "broader_all": [],
+    "narrower": [
+      "ps-filing",
+      "ps-assessment",
+      "ps-payment-collection",
+      "ps-audit",
+      "ps-appeals",
+      "ps-sred-review"
+    ],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "ps-filing",
+    "prefLabel": "Filing & registration",
+    "altLabel": [],
+    "definition": null,
+    "facet": "process_stage",
+    "broader": "ps-root",
+    "broader_all": [
+      "ps-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "150"
+    ],
+    "glossary_terms": [
+      "income-tax-return",
+      "return"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "ps-assessment",
+    "prefLabel": "Assessment & reassessment",
+    "altLabel": [
+      "NOA"
+    ],
+    "definition": null,
+    "facet": "process_stage",
+    "broader": "ps-root",
+    "broader_all": [
+      "ps-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "152",
+      "152(4)"
+    ],
+    "glossary_terms": [
+      "notice-of-assessment-noa",
+      "reassessment"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "ps-payment-collection",
+    "prefLabel": "Payment, refund & collection",
+    "altLabel": [],
+    "definition": null,
+    "facet": "process_stage",
+    "broader": "ps-root",
+    "broader_all": [
+      "ps-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "153",
+      "164"
+    ],
+    "glossary_terms": [
+      "balance-owing",
+      "payroll-remittance",
+      "refund",
+      "remittance"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "ps-audit",
+    "prefLabel": "Audit & examination",
+    "altLabel": [
+      "DID",
+      "ECA",
+      "QAS",
+      "AAF",
+      "QA",
+      "RFI",
+      "UN",
+      "BBR",
+      "TEBA-NPV",
+      "TPRO-NPV",
+      "IAD",
+      "CPRS",
+      "SOD",
+      "QR"
+    ],
+    "definition": null,
+    "facet": "process_stage",
+    "broader": "ps-root",
+    "broader_all": [
+      "ps-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "did",
+      "eca",
+      "qas",
+      "aaf",
+      "qa",
+      "rfi",
+      "un",
+      "bbr",
+      "teba-npv",
+      "tpro-npv",
+      "iad",
+      "cprs",
+      "sod",
+      "qr"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "ps-appeals",
+    "prefLabel": "Objections & appeals",
+    "altLabel": [
+      "NOO"
+    ],
+    "definition": null,
+    "facet": "process_stage",
+    "broader": "ps-root",
+    "broader_all": [
+      "ps-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "noo"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "ps-sred-review",
+    "prefLabel": "SR&ED review",
+    "altLabel": [],
+    "definition": null,
+    "facet": "process_stage",
+    "broader": "ps-root",
+    "broader_all": [
+      "ps-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "37",
+      "248(1)"
+    ],
+    "glossary_terms": [
+      "scientific-research-and-experimental-development-sr-ed"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "tt-root",
+    "prefLabel": "Taxpayer / entity type",
+    "altLabel": [],
+    "definition": null,
+    "facet": "taxpayer_type",
+    "broader": null,
+    "broader_all": [],
+    "narrower": [
+      "tt-individual",
+      "tt-business",
+      "tt-corporation",
+      "tt-partnership",
+      "tt-charity",
+      "tt-registrant",
+      "tt-plan-holder"
+    ],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "tt-individual",
+    "prefLabel": "Individual",
+    "altLabel": [],
+    "definition": null,
+    "facet": "taxpayer_type",
+    "broader": "tt-root",
+    "broader_all": [
+      "tt-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "248(1)",
+      "5",
+      "6",
+      "122.5",
+      "146.01",
+      "150",
+      "146.02",
+      "118(1)",
+      "146.1(1)"
+    ],
+    "glossary_terms": [
+      "common-law-partner",
+      "eligible-child",
+      "employment-income",
+      "gst-hst-credit",
+      "home-buyers-plan-hbp",
+      "income-tax-return",
+      "lifelong-learning-plan-llp",
+      "spouse-or-common-law-partner-amount",
+      "subscriber"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "tt-corporation",
+    "prefLabel": "Corporation",
+    "altLabel": [
+      "CCPC"
+    ],
+    "definition": null,
+    "facet": "taxpayer_type",
+    "broader": "tt-root",
+    "broader_all": [
+      "tt-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "248(1)"
+    ],
+    "glossary_terms": [
+      "corporation",
+      "ccpc"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "tt-partnership",
+    "prefLabel": "Partnership",
+    "altLabel": [],
+    "definition": null,
+    "facet": "taxpayer_type",
+    "broader": "tt-root",
+    "broader_all": [
+      "tt-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "96",
+      "102"
+    ],
+    "glossary_terms": [
+      "partnership"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "tt-charity",
+    "prefLabel": "Charity / qualified donee",
+    "altLabel": [],
+    "definition": null,
+    "facet": "taxpayer_type",
+    "broader": "tt-root",
+    "broader_all": [
+      "tt-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "248(1)",
+      "149.1"
+    ],
+    "glossary_terms": [
+      "registered-charity"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "tt-registrant",
+    "prefLabel": "GST/HST registrant",
+    "altLabel": [],
+    "definition": null,
+    "facet": "taxpayer_type",
+    "broader": "tt-root",
+    "broader_all": [
+      "tt-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "ETA 240",
+      "ETA 123(1)",
+      "ETA 169",
+      "ETA 148"
+    ],
+    "glossary_terms": [
+      "gst-hst-registrant",
+      "input-tax-credit-itc",
+      "small-supplier"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "tt-plan-holder",
+    "prefLabel": "Registered-plan holder",
+    "altLabel": [],
+    "definition": null,
+    "facet": "taxpayer_type",
+    "broader": "tt-root",
+    "broader_all": [
+      "tt-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [
+      "146.6",
+      "146.1",
+      "147.1",
+      "146.3",
+      "146",
+      "146.2"
+    ],
+    "glossary_terms": [
+      "first-home-savings-account-fhsa",
+      "registered-education-savings-plan-resp",
+      "registered-pension-plan-rpp",
+      "registered-retirement-income-fund-rrif",
+      "registered-retirement-savings-plan-rrsp",
+      "tax-free-savings-account-tfsa"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "auth-root",
+    "prefLabel": "Authority",
+    "altLabel": [],
+    "definition": null,
+    "facet": "authority_tier",
+    "broader": null,
+    "broader_all": [],
+    "narrower": [
+      "auth-legislation",
+      "auth-accounting-standard",
+      "auth-cra-interpretation"
+    ],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "auth-legislation",
+    "prefLabel": "Legislation (ITA / ETA / Regulations)",
+    "altLabel": [
+      "ITA",
+      "Act",
+      "PA"
+    ],
+    "definition": null,
+    "facet": "authority_tier",
+    "broader": "auth-root",
+    "broader_all": [
+      "auth-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "ita",
+      "act",
+      "pa"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "auth-accounting-standard",
+    "prefLabel": "Accounting / audit standards (IFRS/GAAP/ASPE)",
+    "altLabel": [
+      "ASPE",
+      "CanAS",
+      "F/S",
+      "GAAP",
+      "IFRS"
+    ],
+    "definition": null,
+    "facet": "authority_tier",
+    "broader": "auth-root",
+    "broader_all": [
+      "auth-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "aspe",
+      "canas",
+      "f-s",
+      "gaap",
+      "ifrs"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-root",
+    "prefLabel": "CRA program entities",
+    "altLabel": [],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": null,
+    "broader_all": [],
+    "narrower": [
+      "pe-org",
+      "pe-role",
+      "pe-system",
+      "pe-document",
+      "pe-audit-concept",
+      "pe-sred",
+      "pe-external",
+      "pe-other"
+    ],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-org",
+    "prefLabel": "Organizational units",
+    "altLabel": [
+      "CRA",
+      "CPB",
+      "DCPB",
+      "ILBIB",
+      "ILBD",
+      "LBAD",
+      "TSO",
+      "TC",
+      "CTSO",
+      "HQ",
+      "TGD",
+      "PAD",
+      "PDD",
+      "SRD",
+      "AERB",
+      "FAB",
+      "AD",
+      "HRB",
+      "LRD",
+      "WRCD",
+      "WRCoE",
+      "ITB",
+      "LPRAB",
+      "SIAD",
+      "SIB",
+      "TSDMB"
+    ],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": "pe-root",
+    "broader_all": [
+      "pe-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "cra",
+      "cpb",
+      "dcpb",
+      "ilbib",
+      "ilbd",
+      "lbad",
+      "tso",
+      "tc",
+      "ctso",
+      "hq",
+      "tgd",
+      "pad",
+      "pdd",
+      "srd",
+      "aerb",
+      "fab",
+      "ad-2",
+      "hrb",
+      "lrd",
+      "wrcd",
+      "wrcoe",
+      "itb",
+      "lprab",
+      "siad",
+      "sib",
+      "tsdmb"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-role",
+    "prefLabel": "Roles & specialists",
+    "altLabel": [
+      "ADA",
+      "ECAS",
+      "ISS",
+      "LFCM",
+      "LFSM",
+      "AD",
+      "AE",
+      "FR",
+      "FRM",
+      "FTA",
+      "NTSS",
+      "OC",
+      "RTA",
+      "RTM",
+      "RTO",
+      "CFO",
+      "TP",
+      "LRA"
+    ],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": "pe-root",
+    "broader_all": [
+      "pe-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "ada",
+      "ecas",
+      "iss",
+      "lfcm",
+      "lfsm",
+      "ad",
+      "ae",
+      "fr",
+      "frm",
+      "fta",
+      "ntss",
+      "oc",
+      "rta",
+      "rtm",
+      "rto",
+      "cfo",
+      "tp",
+      "lra"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-system",
+    "prefLabel": "Systems & tools",
+    "altLabel": [
+      "AIMS",
+      "BFICS",
+      "SARAT",
+      "SALT",
+      "BCCS",
+      "CAS",
+      "CMS",
+      "CORTAX",
+      "CSCOR",
+      "IDEA",
+      "ORG",
+      "RAPID",
+      "SA",
+      "Win/ALS",
+      "ESAR",
+      "FIRM",
+      "LASS",
+      "TARS"
+    ],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": "pe-root",
+    "broader_all": [
+      "pe-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "aims",
+      "bfics",
+      "sarat",
+      "salt",
+      "bccs",
+      "cas",
+      "cms",
+      "cortax",
+      "cscor",
+      "idea",
+      "org",
+      "rapid",
+      "sa",
+      "win-als",
+      "esar",
+      "firm",
+      "lass",
+      "tars"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-document",
+    "prefLabel": "Manuals, reports & forms",
+    "altLabel": [
+      "LBAM",
+      "ITAM",
+      "AM",
+      "PIAAR",
+      "TOM",
+      "CRM",
+      "FCRM",
+      "IC",
+      "FAM",
+      "FRR",
+      "IT",
+      "PD",
+      "T1",
+      "T2",
+      "T4",
+      "T5013",
+      "TOC",
+      "W/P",
+      "PAR"
+    ],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": "pe-root",
+    "broader_all": [
+      "pe-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "lbam",
+      "itam",
+      "am",
+      "piaar",
+      "tom",
+      "crm",
+      "fcrm",
+      "ic",
+      "fam",
+      "frr",
+      "it",
+      "pd",
+      "t1",
+      "t2",
+      "t4",
+      "t5013",
+      "toc",
+      "w-p",
+      "par"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-sred",
+    "prefLabel": "SR&ED program concepts",
+    "altLabel": [
+      "AW",
+      "BC",
+      "CF",
+      "NW",
+      "STA",
+      "STU",
+      "SIS",
+      "SUE",
+      "SW",
+      "TA",
+      "CP+ED",
+      "EP",
+      "PPA"
+    ],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": "pe-root",
+    "broader_all": [
+      "pe-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "aw",
+      "bc",
+      "cf",
+      "nw",
+      "sta",
+      "stu",
+      "sis",
+      "sue",
+      "sw",
+      "ta",
+      "cp-ed",
+      "ep",
+      "ppa"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-external",
+    "prefLabel": "External bodies & oversight",
+    "altLabel": [
+      "APFF",
+      "OMoR",
+      "TEI",
+      "CICA",
+      "IFA",
+      "OAG",
+      "PROC",
+      "CBSA"
+    ],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": "pe-root",
+    "broader_all": [
+      "pe-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "apff",
+      "omor",
+      "tei",
+      "cica",
+      "ifa",
+      "oag",
+      "proc",
+      "cbsa"
+    ],
+    "method": "skeleton",
+    "validated": false
+  },
+  {
+    "id": "pe-other",
+    "prefLabel": "Other program acronyms (triage)",
+    "altLabel": [
+      "PIA",
+      "AP",
+      "ASA",
+      "ATIP",
+      "FTC",
+      "FTCAS",
+      "IP",
+      "PCPR",
+      "TPR",
+      "Bill",
+      "BN",
+      "CC",
+      "EID",
+      "EFC",
+      "FC",
+      "MPPD",
+      "NOA",
+      "PE",
+      "SBD",
+      "SIN",
+      "TPP",
+      "TYE",
+      "UCC",
+      "PCRD",
+      "SOW",
+      "CMRT",
+      "B3",
+      "MOU"
+    ],
+    "definition": null,
+    "facet": "program_entity",
+    "broader": "pe-root",
+    "broader_all": [
+      "pe-root"
+    ],
+    "narrower": [],
+    "related": [],
+    "mapped_provisions": [],
+    "glossary_terms": [
+      "pia",
+      "ap",
+      "asa",
+      "atip",
+      "ftc",
+      "ftcas",
+      "ip",
+      "pcpr",
+      "tpr",
+      "bill",
+      "bn",
+      "cc",
+      "eid",
+      "efc",
+      "fc",
+      "mppd",
+      "noa",
+      "pe",
+      "sbd",
+      "sin",
+      "tpp",
+      "tye",
+      "ucc",
+      "pcrd",
+      "sow",
+      "cmrt",
+      "b3",
+      "mou"
+    ],
+    "method": "skeleton",
+    "validated": false
+  }
+]

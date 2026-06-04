@@ -13,7 +13,12 @@
     "synonyms": { "type": "array", "items": { "type": "string" }, "description": "Acronyms / jargon variants -> become skos:altLabel (critical for matching enterprise text)." },
     "see_also": { "type": "array", "items": { "type": "string" }, "description": "Related term ids/labels -> become skos:related edges." },
     "provisions": { "type": "array", "items": { "type": "string" }, "description": "ITA/Reg/IT/Folio anchors, e.g. '54', '20(1)(a)', 'IT-518R' -> authority grouping prior." },
-    "source": { "type": "string" },
+    "domain": { "type": ["string", "null"], "description": "Pre-existing coarse category from the source glossary (reconciled, not overridden), e.g. 'Capital gains', 'GST/HST'." },
+    "category": { "type": ["string", "null"], "description": "For acronyms: source 'Category' (Agency/Branch/System/Program/Audit technique...)." },
+    "legal_flag": { "type": ["string", "null"], "description": "Source flag, e.g. 'Plain-language' vs 'Legal/technical' — carries the not-law caveat." },
+    "notes": { "type": ["string", "null"] },
+    "source": { "type": ["string", "null"], "description": "Source family." },
+    "source_url": { "type": ["string", "null"], "description": "Provenance URL." },
     "language": { "type": "string", "enum": ["en", "fr"] }
   }
 }
