@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/casualcomputer/tax_corpus/schemas/chunk.schema.json",
+  "title": "TaxCorpusChunk",
+  "description": "A single retrievable chunk derived from a CRA source, carrying provenance, currency, and statutory-linkage metadata. The non-text fields are what let the system enforce citation accuracy, currency-flagging, and authority framing.",
+  "type": "object",
+  "required": ["chunk_id", "source_type", "doc_id", "text", "status", "source_url", "retrieved_at"],
+  "additionalProperties": false,
+  "properties": {
+    "chunk_id": { "type": "string", "description": "Stable unique id, e.g. IT-518R#p12." },
+    "source_type": { "type": "string", "enum": ["audit_manual", "interpretation_bulletin"] },
+    "doc_id": { "type": "string", "description": "e.g. 'IT-518R' or 'audit-manual/ch-11'." },
+    "title": { "type": "string" },
+    "section_path": { "type": "array", "items": { "type": "string" }, "description": "Hierarchy, e.g. ['Chapter 11','11.3','Net worth method']." },
+    "paragraph_id": { "type": ["string", "null"], "description": "Citation anchor; for ITs this is the numbered paragraph." },
+    "text": { "type": "string" },
+    "issue_date": { "type": ["string", "null"], "format": "date" },
+    "last_updated": { "type": ["string", "null"], "format": "date" },
+    "status": { "type": "string", "enum": ["current", "archived", "superseded", "unknown"] },
+    "superseded_by": { "type": ["string", "null"], "description": "e.g. 'Income Tax Folio S3-F6-C1'." },
+    "ita_sections": { "type": "array", "items": { "type": "string" }, "description": "Extracted refs, e.g. ['67.1','18(1)(a)']." },
+    "authority_tier": { "type": "string", "enum": ["cra_administrative_position", "cra_internal_procedure", "unknown"] },
+    "language": { "type": "string", "enum": ["en", "fr"] },
+    "source_url": { "type": "string", "format": "uri" },
+    "retrieved_at": { "type": "string", "format": "date-time" },
+    "content_hash": { "type": "string", "description": "Hash of normalized text for change detection / re-index." }
+  }
+}

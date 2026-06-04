@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/casualcomputer/tax_corpus/schemas/eval_item.schema.json",
+  "title": "TaxEvalItem",
+  "description": "A gold or red-team evaluation item. 'validated' must be true (human expert reviewed) before an item counts toward reported metrics or acceptance gates.",
+  "type": "object",
+  "required": ["id", "question", "item_type", "answer_type", "validated"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string" },
+    "question": { "type": "string" },
+    "reference_answer": { "type": ["string", "null"] },
+    "required_citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["doc_id"],
+        "additionalProperties": false,
+        "properties": {
+          "doc_id": { "type": "string" },
+          "paragraph_id": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "relevant_chunk_ids": { "type": "array", "items": { "type": "string" }, "description": "Retrieval gold for Recall@k / MRR / nDCG." },
+    "answer_type": { "type": "string", "enum": ["factual", "interpretive", "procedural", "computational", "out_of_scope"] },
+    "item_type": { "type": "string", "enum": ["gold", "red_team"] },
+    "red_team_category": { "type": ["string", "null"], "enum": ["outdated_position", "out_of_scope", "hallucination_bait", "authority_confusion", "ambiguous_facts", null] },
+    "difficulty": { "type": "string", "enum": ["easy", "medium", "hard"] },
+    "currency_sensitive": { "type": "boolean" },
+    "expected_behavior": { "type": "string", "description": "Especially for red_team: what a correct system does (flag currency / abstain / ask to clarify)." },
+    "ita_sections": { "type": "array", "items": { "type": "string" } },
+    "validated": { "type": "boolean", "description": "True only after human expert review." }
+  }
+}

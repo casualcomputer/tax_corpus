@@ -1,0 +1,36 @@
+# tax_corpus — recommended local-first components.
+# Pin versions when you build; these are grouped by pipeline stage (see docs/).
+
+# --- Acquisition & parsing ---
+httpx                 # fetch CRA pages
+trafilatura           # main-content extraction / de-boilerplate
+selectolax            # fast structure-aware HTML parsing (preserve numbered paragraphs)
+lxml
+
+# --- Data / schema ---
+pydantic
+jsonschema            # validate against schemas/*.json
+datasets              # build/version eval + training sets
+
+# --- Embeddings, retrieval, rerank (local) ---
+sentence-transformers # bi-encoder fine-tuning (MNRL/triplet/CoSENT losses)
+FlagEmbedding         # bge embeddings + bge-reranker (cross-encoder)
+qdrant-client         # vector store (or use pgvector / lancedb / chromadb)
+rank-bm25             # sparse retrieval for hybrid (or Elasticsearch/OpenSearch)
+
+# --- Generation (local) — pick one serving path ---
+vllm                  # GPU serving (AWQ/GPTQ); OR:
+# llama-cpp-python     # CPU/Metal GGUF serving; OR run Ollama as a separate service
+transformers
+accelerate
+
+# --- Fine-tuning (behavioral QLoRA + preference optimization) ---
+peft                  # LoRA / QLoRA
+trl                   # SFT + DPO/ORPO/KTO trainers
+bitsandbytes          # 4-bit quantized training
+
+# --- Evaluation ---
+ragas                 # faithfulness, answer relevancy, context precision/recall
+deepeval              # assertion-style test cases / CI regression
+# promptfoo (npm)      # prompt & model A/B on the gold set (Node tool, install separately)
+scikit-learn          # retrieval/classification metrics (F1, nDCG helpers)
